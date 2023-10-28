@@ -7,16 +7,35 @@
 {% block content %}
     <div class="main">
         <a href="{% comment %}{% url "" %}{% endcomment %}">
-            <button class="btn btn-lg btn-block btn-">Новости</button>
+            <button class="btn btn-lg btn-block btn-primary">Новости</button>
         </a>
-        <br>
+        <br><br>
         <a href="{% comment %}{% url "" %}{% endcomment %}">
-            <button class="btn btn-lg btn-block btn-">Заметки</button>
+            <button class="btn btn-lg btn-block btn-warning">Заметки</button>
         </a>
-        <br>
+        <br><br>
         <a href="{% comment %}{% url "" %}{% endcomment %}">
-            <button class="btn btn-lg btn-block btn-">Погода</button>
+            <button class="btn btn-lg btn-block btn-success">Погода</button>
         </a>
-        <br>
     </div>
 {% endblock content %}
+
+{% block style %}
+    <style>
+        .main {
+            transition: all 0.5s ease;
+            height: 270px;
+            width: 600px;
+            border-radius: 15px 15px 15px 15px;
+            background-color: black;
+            margin: 100px auto;
+        }
+        .main:hover {
+            transform: scale(1.05);
+        }
+        .main a button {
+            margin: 13px 30px;
+            width: 90%;
+        }
+    </style>
+{% endblock style %}
