@@ -1,0 +1,22 @@
+{% extends "mainPage/base.html" %}
+
+{% block title %}
+    Главная навигационная страница
+{% endblock title %}
+
+{% block content %}
+    <div class="main">
+        <a href="{% comment %}{% url "" %}{% endcomment %}">
+            <button class="btn btn-lg btn-block btn-">Новости</button>
+        </a>
+        <br>
+        <a href="{% comment %}{% url "" %}{% endcomment %}">
+            <button class="btn btn-lg btn-block btn-">Заметки</button>
+        </a>
+        <br>
+        <a href="{% comment %}{% url "" %}{% endcomment %}">
+            <button class="btn btn-lg btn-block btn-">Погода</button>
+        </a>
+        <br>
+    </div>
+{% endblock content %}
