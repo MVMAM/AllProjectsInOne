@@ -1,25 +1,31 @@
-{% extends "mainPage/base.html" %}
+{% load static %}
+{% load django_bootstrap5 %}
 
-{% block title %}
-    Главная навигационная страница
-{% endblock title %}
-
-{% block content %}
-    <div class="main">
-        <a href="{% comment %}{% url "" %}{% endcomment %}">
-            <button class="btn btn-lg btn-block btn-primary">Новости</button>
-        </a>
-        <br><br>
-        <a href="{% comment %}{% url "" %}{% endcomment %}">
-            <button class="btn btn-lg btn-block btn-warning">Заметки</button>
-        </a>
-        <br><br>
-        <a href="{% comment %}{% url "" %}{% endcomment %}">
-            <button class="btn btn-lg btn-block btn-success">Погода</button>
-        </a>
-    </div>
-{% endblock content %}
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% bootstrap_css %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Главная навигационная страница{% endblock title %}</title>
+</head>
+<body>
+    {% block content %}
+        <div class="main">
+            <a href="{% url "" %}">
+                <button class="btn btn-lg btn-block btn-primary">Новости</button>
+            </a>
+            <br><br>
+            <a href="{% url "" %}">
+                <button class="btn btn-lg btn-block btn-warning">Заметки</button>
+            </a>
+            <br><br>
+            <a href="{% url "" %}">
+                <button class="btn btn-lg btn-block btn-success">Погода</button>
+            </a>
+        </div>
+    {% endblock content %}
+</body>
 {% block style %}
     <style>
         .main {
@@ -39,3 +45,4 @@
         }
     </style>
 {% endblock style %}
+</html>
