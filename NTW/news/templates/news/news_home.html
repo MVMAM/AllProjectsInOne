@@ -1,0 +1,25 @@
+{% extends "mainPage/base.html" %}
+
+{% block title %}
+    Публикации
+{% endblock title %}
+
+{% block content %}
+    <div class="features">
+        <h1>Мои публикации</h1>
+        {% if news %}
+            {% for element in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ element.title }}</h3>
+                    <p>{{ element.anons }}</p>
+                    <small>{{ element.date }}</small><br><br>
+                    <a href="{% url 'news_detail' element.id %}" class="btn btn-sm col-sm-4 btn-info">Прочитать детальнее</a>
+                    <a href="{% url 'news_update' element.id %}" class="btn btn-sm col-sm-4 btn-warning">Изменить статью</a>
+                    <a href="{% url 'news_delete' element.id %}" class="btn btn-sm col-sm-3 btn-danger">Удалить статью</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>У вас нет записей!😪😪😪</p>
+        {% endif %}
+    </div>
+{% endblock content %}

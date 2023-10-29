@@ -1,0 +1,22 @@
+{% extends "mainPage/base.html" %}
+
+{% block title %}
+    Изменение статьи
+{% endblock title %}
+
+{% block content %}
+    <div class="features">
+        <h1>Изменение статьи</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.date }}<br>
+            <span>{{ error }}</span>
+            <button type="submit" class="btn btn-success">
+                Поменять
+            </button>
+        </form>
+    </div>
+{% endblock content %}
