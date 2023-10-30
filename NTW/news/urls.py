@@ -3,7 +3,7 @@ from .views import *
 
 
 urlpatterns = [
-    path('', home, name="home"),
+    path('', home, name="home_of_news"),
     path('news_home', news_home, name="news_home"),
     path('create_news/', create_news, name="create_news"),
     path('<int:pk>', NewsDetailView.as_view(), name="news_detail"),

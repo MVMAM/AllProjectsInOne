@@ -1,0 +1,12 @@
+{% extends "taskmanager/base.html" %}
+
+{% block title %}
+    {{ task.title }}
+{% endblock title %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ task.title }}</h1>
+        <p>{{ task.description }}</p>
+    </div>
+{% endblock content %}

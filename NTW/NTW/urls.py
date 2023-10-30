@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainPage.urls')),
     path('news/', include('news.urls')),
+    path('taskmanager/', include('taskmanager.urls')),
 ]
 
 

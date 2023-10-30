@@ -1,16 +1,16 @@
-{% extends "news/layout.html" %}
+{% extends "taskmanager/base.html" %}
 
 {% block title %}
-    Удаление статьи
+    Удаление задачи
 {% endblock title %}
 
 {% block content %}
     <div class="features">
-        <h1>Вы точно хотите удалить свою статью?</h1>
+        <h1>Вы точно хотите удалить свою заметку?</h1>
         <form method="post">
             {% csrf_token %}
             <button type="submit" class="btn btn-lg btn-block btn-danger">
-                Удалить статью
+                Удалить заметку
             </button>
         </form>
     </div>

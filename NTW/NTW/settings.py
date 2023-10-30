@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_bootstrap5',
     'mainPage',
     'news',
+    'taskmanager',
 ]
 
 MIDDLEWARE = [

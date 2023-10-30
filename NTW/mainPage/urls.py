@@ -7,4 +7,5 @@ from .views import *
 urlpatterns = [
     path('', mainPage, name="mainPage"),
     path('news/', include('news.urls')),
+    path('taskmanager/', include('taskmanager.urls')),
 ]
