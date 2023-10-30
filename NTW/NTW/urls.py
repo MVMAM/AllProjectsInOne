@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include('mainPage.urls')),
     path('news/', include('news.urls')),
     path('taskmanager/', include('taskmanager.urls')),
+    path('weather/', include('weather.urls')),
 ]
 
 

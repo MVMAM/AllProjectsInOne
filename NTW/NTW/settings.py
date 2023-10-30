@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mainPage',
     'news',
     'taskmanager',
+    'weather',
 ]
 
 MIDDLEWARE = [
