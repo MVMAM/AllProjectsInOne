@@ -35,13 +35,12 @@
             <div class="col-4 offset-1">
                 <h1>Информация</h1>
                 <div class="alert alert-danger">
-                    Погода в Москве
+                    <b>Город:</b> {{ info.city }}<br>
+                    <b>Температура:</b> {{ info.temp }}<sup>o</sup>C<br>
+                    <img src="http://openweathermap.org/img/w/{{ info.icon }}.png" class="img-thumbnail">
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-{% comment %}
-https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=6949a2808723bdd6406ed4175fdea64d
-{% endcomment %}
